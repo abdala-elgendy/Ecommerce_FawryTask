@@ -5,6 +5,12 @@ public class Customer {
     private double money;
 
     public Customer(String name, double money) {
+        if(name== null || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be null or empty.");
+        }
+        if(money < 0) {
+            throw new IllegalArgumentException("Money cannot be negative.");
+        }
         this.name = name;
         this.money = money;
     }
