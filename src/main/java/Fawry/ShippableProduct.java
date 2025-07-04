@@ -5,6 +5,10 @@ public class ShippableProduct extends Product implements Shippable {
 
     public ShippableProduct(String name, double price, int quantity, double weight) {
         super(name, price, quantity);
+        if(weight <= 0 ) {
+            throw new IllegalArgumentException("weight should be greater than zero.");
+        }
+
         this.weight = weight;
     }
 

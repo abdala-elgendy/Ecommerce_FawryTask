@@ -32,7 +32,6 @@ public class CheckoutService {
         System.out.println("Subtotal\t" + subtotal);
         System.out.println("Shipping\t" + shippingFee);
         System.out.println("Amount\t\t" + total);
-        System.out.println("Balance after payment\t" + customer.getMoney());
     }
 }
 

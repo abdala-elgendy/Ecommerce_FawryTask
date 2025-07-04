@@ -6,6 +6,9 @@ public abstract class Product {
     protected int quantity;
 
     public Product(String name, double price, int quantity) {
+        if ( name.isEmpty() || price <= 0 || quantity < 0) {
+            throw new IllegalArgumentException("Invalid product details.");
+        }
         this.name = name;
         this.price = price;
         this.quantity = quantity;
