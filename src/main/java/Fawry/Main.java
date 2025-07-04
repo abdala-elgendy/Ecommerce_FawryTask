@@ -9,7 +9,7 @@ public class Main {
         Product cheese = new ExpirableProduct("Cheese", 100, 10,200, LocalDate.now().plusDays(1));
         Product biscuits = new ExpirableProduct("Biscuits", 150, 5,700, LocalDate.now().plusDays(1));
         Product tv = new ShippableProduct("TV", 300, 3, 700);
-        Product scratchCard = new Product("Scratch Card", 50, 5) {};
+        Product scratchCard = new Product("Scratch Card", 50, 5) {}; //not shippable
 
         Customer customer = new Customer("Abdullah", 10000);
         Cart cart = new Cart();

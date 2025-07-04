@@ -23,7 +23,5 @@ public class Customer {
         return false;
     }
 
-    public double getMoney() {
-        return money;
-    }
+
 }
