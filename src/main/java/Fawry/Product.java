@@ -19,10 +19,13 @@ public abstract class Product {
     }
 
     public boolean isAvailable(int requiredQuantity) {
-        return quantity >= requiredQuantity && !isExpired();
+        return quantity >= requiredQuantity && requiredQuantity > 0 && !isExpired();
     }
 
     public void reduceQuantity(int amount) {
+        if (amount <= 0) {
+            throw new IllegalArgumentException("Amount to reduce must be greater than zero.");
+        }
         quantity -= amount;
     }
 
